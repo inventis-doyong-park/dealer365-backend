@@ -1,0 +1,20 @@
+{
+  "name": "crm",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "pkgs/crm/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/pkgs/crm",
+        "tsConfig": "pkgs/crm/tsconfig.lib.json",
+        "packageJson": "pkgs/crm/package.json",
+        "main": "pkgs/crm/src/index.ts",
+        "assets": ["pkgs/crm/*.md"]
+      }
+    }
+  }
+}

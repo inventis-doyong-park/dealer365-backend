@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dealer365-backend/crm": ["pkgs/crm/src/index.ts"],
+      "@dealer365-backend/custom-logger": ["libs/custom-logger/src/index.ts"],
+      "@dealer365-backend/database": ["libs/database/src/index.ts"],
+      "@dealer365-backend/message-broker": ["libs/message-broker/src/index.ts"],
+      "@dealer365-backend/nest-common": ["libs/nest-common/src/index.ts"],
+      "@dealer365-backend/shared": ["libs/shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

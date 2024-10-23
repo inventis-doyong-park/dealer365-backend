@@ -1,0 +1,20 @@
+{
+  "name": "custom-logger",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/custom-logger/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/custom-logger",
+        "tsConfig": "libs/custom-logger/tsconfig.lib.json",
+        "packageJson": "libs/custom-logger/package.json",
+        "main": "libs/custom-logger/src/index.ts",
+        "assets": ["libs/custom-logger/*.md"]
+      }
+    }
+  }
+}
