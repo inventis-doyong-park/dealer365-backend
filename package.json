@@ -2,7 +2,14 @@
   "name": "@dealer365-backend/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.lib.json",
+    "build:test": "cd apps/test && tsc -p tsconfig.app.json",    
+    "docker": "docker build -t test-api -f dockerfile.test .",
+    "publish:shared": "cd libs/shared && npm publish --registry=https://npm.pkg.github.com",
+    "publish:logger": "cd libs/logger && npm publish --registry=https://npm.pkg.github.com"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
